@@ -1,16 +1,16 @@
-name: Primeiro Workflow Linuxtips
+name: Primeiro Workflow Linuxtips # Nome principal do workflow.
 
-on:
-  push:
-    branches:
+on:             # Como esse workflow será triggado.
+  push:         # Nesse caso, será triggado sempre que houver
+    branches:   # push na branche MAIN.
       - main
 
-jobs:
-  giropops:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Confere versão do Ubuntu
-        run: cat /etc/os-release
+jobs:                             # Inicio das especificações dos jobs.
+  giropops:                       # Nome do job.
+    runs-on: ubuntu-latest        # Qual máquina vai rodar.
+    steps:                        # Inicio das especificações dos passos que o job vai seguir.
+      - name: Confere versão do Ubuntu    # Nome do passo.
+        run: cat /etc/os-release          # Execução do passo.
       
-      - name: Exibir uma mensagem
-        run: echo "Estou fazendo o curso de Github Actions da Linuxtips!"
+      - name: Exibir uma mensagem                                           # Nome do passo.
+        run: echo "Estou fazendo o curso de Github Actions da Linuxtips!"   # Execução do passo.
