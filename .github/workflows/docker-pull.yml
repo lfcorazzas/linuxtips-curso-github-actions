@@ -1,0 +1,23 @@
+name: Desafio Docker Pull
+
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: 'Image to deploy on docker'
+        required: true
+        default: 'select'
+        type: string
+
+jobs:
+  pull-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confere versão do Docker
+        run: docker -v
+      
+      - name: Instala imagem inputada
+        run: docker pull {{ inputs.image }}
+
+      - name: Lista imagens
+        run: docker images
