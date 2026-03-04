@@ -21,3 +21,13 @@ jobs:
 
       - name: Lista imagens
         run: docker images
+
+      - name: Roda scout na imagem baixada
+        uses: docker/scout-action@v1
+        with:
+          image: local://${{ inputs.image }}
+          command: quickview
+          # only-severities: critical,high
+          # exit-code: true
+          # # Optional: Add results as a comment in a PR
+          # write-comment: true
