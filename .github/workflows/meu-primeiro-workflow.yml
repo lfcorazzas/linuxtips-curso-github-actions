@@ -1,9 +1,7 @@
 name: Primeiro Workflow Linuxtips # Nome principal do workflow.
 
-on:             # Como esse workflow será triggado.
-  push:         # Nesse caso, será triggado sempre que houver
-    branches:   # push na branche MAIN.
-      - main
+on:                   # Como esse workflow será triggado.
+  workflow_dispatch   # Nesse caso, apenas manualmente.
 
 jobs:                             # Inicio das especificações dos jobs.
   giropops:                       # Nome do job.

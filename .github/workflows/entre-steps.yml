@@ -14,4 +14,4 @@ jobs:                             # Inicio das especificações dos jobs.
         run: echo "Estou fazendo o curso de Github Actions da Linuxtips!" > mensagem.txt    # Execução do passo.
 
       - name: Lê o arquivo criado anteriormente                                             # Nome do passo.
-        run: cat mensagem.txt    # Execução do passo.
+        run: cat mensagem.txt                                                               # Execução do passo.
