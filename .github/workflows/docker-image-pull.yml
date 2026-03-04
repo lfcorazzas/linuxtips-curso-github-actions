@@ -38,4 +38,4 @@ jobs:
         uses: docker/scout-action@v1
         with:
           image: local://${{ inputs.image }}
-          command: recomendations
+          command: recommendations
