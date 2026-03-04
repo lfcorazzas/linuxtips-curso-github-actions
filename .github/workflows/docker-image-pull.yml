@@ -15,6 +15,12 @@ jobs:
     steps:
       - name: Confere versão do Docker
         run: docker -v
+
+      - name: Login no Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Instala imagem inputada
         run: docker pull ${{ inputs.image }}
