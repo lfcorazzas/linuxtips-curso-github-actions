@@ -1,7 +1,7 @@
 name: Funcionamento entre steps # Nome principal do workflow.
 
 on:                   # Como esse workflow será triggado.
-  workflow-dispatch   # Nesse caso, apenas manualmente.
+  workflow_dispatch   # Nesse caso, apenas manualmente.
 
 jobs:                             # Inicio das especificações dos jobs.
   entre-steps:                       # Nome do job.
