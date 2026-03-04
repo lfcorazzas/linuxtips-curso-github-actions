@@ -1,0 +1,11 @@
+name: Desafio Docker Pull
+
+on:
+  workflow_dispatch
+
+jobs:
+  pull-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confere versão do Docker
+        run: docker -v
